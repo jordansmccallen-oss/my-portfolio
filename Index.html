@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Visual & Interactive Studio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dark: '#0a0a0a',
+                        card: '#161616',
+                        border: '#262626',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #0a0a0a;
+            color: #f5f5f5;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0a0a0a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #262626;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #404040;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-neutral-700 selection:text-white">
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="sticky top-0 z-40 w-full bg-dark/80 backdrop-blur-md border-b border-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center text-white font-bold shadow-lg shadow-blue-500/20">
+                    JM
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-base font-bold tracking-tight text-white leading-tight">JORDAN MCCALLEN</span>
+                    <span class="text-[10px] tracking-widest text-neutral-400 font-medium uppercase">Visual & Interactive Portfolio</span>
+                </div>
+          </a>
+            <nav class="flex items-center gap-6">
+                <a href="#projects" class="text-sm font-medium text-neutral-400 hover:text-white transition-colors">Projects</a>
+                <a href="#about" class="text-sm font-medium text-neutral-400 hover:text-white transition-colors">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="flex-grow">
+        
+        <!-- HERO / INTRO -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-12">
+            <div class="max-w-3xl">
+                
+                <h1 class="text-4xl sm:text-6xl font-bold tracking-tight text-white mb-6 leading-[1.1]">
+                    TRADE SHOW & <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-blue-500 to-indigo-400">EXPERIENTAL 	PORDUCER</span>
+                </h1>
+                <p class="text-neutral-400 max-w-2xl text-base sm:text-lg mb-8 leading-relaxed">
+                  Explore a curated selection of  key projects. Click on any box to expand the immersive gallery with high-resolution imagery and video walkthroughs.
+              </p>
+                <button id="getInTouchBtn" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-semibold px-6 py-3.5 rounded-xl transition-all shadow-lg shadow-blue-600/25 text-sm">
+                    Get in Touch 
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+              </button>
+          </div>
+        </section>
+
+        <!-- 3x3 PORTFOLIO GRID SECTION -->
+        <section id="projects" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div id="portfolioGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Dynamically populated via JavaScript -->
+            </div>
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section id="about" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 border-t border-border mt-12">
+            <div class="max-w-5xl mx-auto bg-card border border-border rounded-2xl p-8 sm:p-12 shadow-2xl">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                    <!-- Headshot Image on Left -->
+                  <div class="lg:col-span-4 flex justify-center">
+                    <div class="relative w-48 h-60 sm:w-56 sm:h-72 rounded-xl overflow-hidden border border-border shadow-lg bg-neutral-900">
+                      <img src="images/headshot.jpg" alt="Headshot" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80'">
+                        </div>
+                    </div>
+                    <!-- Title and Description on Right -->
+                    <div class="lg:col-span-8 text-left">
+                        <span class="text-xs uppercase tracking-widest text-neutral-400 font-semibold mb-2 block">About The Designer</span>
+                        <h2 class="text-2xl sm:text-3xl font-bold text-white mb-4">Experiential Producer &amp; Spatial Designer</h2>
+                        <p class="text-neutral-300 text-base leading-relaxed mb-6">
+                            Specializing in end-to-end experiential marketing, large-scale event production, and turn-key trade show booth fabrications. Bridging the gap between 3D spatial modeling, structural engineering, and high-impact brand storytelling to build immersive attendee environments.
+                        </p>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="text-xs bg-neutral-800 text-neutral-300 px-3 py-1.5 rounded-full border border-neutral-700">Spatial Layouts</span>
+                            <span class="text-xs bg-neutral-800 text-neutral-300 px-3 py-1.5 rounded-full border border-neutral-700">3D CAD Modeling</span>
+                            <span class="text-xs bg-neutral-800 text-neutral-300 px-3 py-1.5 rounded-full border border-neutral-700">Vendor Management</span>
+                            <span class="text-xs bg-neutral-800 text-neutral-300 px-3 py-1.5 rounded-full border border-neutral-700">Turn-Key Fabrications</span>
+                        </div>
+                  </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="w-full border-t border-border py-8 text-center text-xs text-neutral-500">
+        <p>&copy; 2026 Experiential Portfolio. All rights reserved.</p>
+    </footer>
+
+    <!-- LIGHTBOX MODAL CAROUSEL -->
+    <div id="lightboxModal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden items-center justify-center p-4 sm:p-8">
+        <button id="closeLightbox" class="absolute top-6 right-6 text-neutral-400 hover:text-white p-3 z-10 transition-colors bg-neutral-900/80 rounded-full border border-neutral-800">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+
+        <div class="relative max-w-5xl w-full max-h-[90vh] flex flex-col items-center justify-center">
+            <!-- Carousel Main Display (Supports Image and Video) -->
+            <div class="relative w-full flex items-center justify-center overflow-hidden rounded-xl bg-neutral-950 border border-neutral-800 shadow-2xl" style="height: 60vh;">
+                <img id="lightboxImage" src="" alt="Project Image" class="max-h-full max-w-full object-contain transition-all duration-300">
+                <video id="lightboxVideo" src="" controls autoplay muted loop class="max-h-full max-w-full object-contain hidden transition-all duration-300"></video>
+                
+                <!-- Prev / Next Arrows -->
+                <button id="prevBtn" class="absolute left-4 bg-neutral-900/80 hover:bg-neutral-800 text-white p-3 rounded-full border border-neutral-700 transition-all shadow-lg z-10">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+                </button>
+                <button id="nextBtn" class="absolute right-4 bg-neutral-900/80 hover:bg-neutral-800 text-white p-3 rounded-full border border-neutral-700 transition-all shadow-lg z-10">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                </button>
+            </div>
+
+            <!-- Carousel Info Bar -->
+            <div class="w-full mt-4 flex items-center justify-between text-neutral-400 text-sm px-2">
+                <div>
+                    <h3 id="lightboxTitle" class="text-white font-semibold text-base">Project Title</h3>
+                    <p id="lightboxCategory" class="text-xs text-neutral-400 uppercase tracking-wider">Category</p>
+                </div>
+                <div id="imageCounter" class="bg-neutral-900 px-4 py-1.5 rounded-full border border-neutral-800 text-xs">
+                    Item 1 of 3
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- EMAIL POPUP MODAL -->
+    <div id="emailModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden items-center justify-center p-4">
+        <div class="bg-card border border-border rounded-2xl p-8 max-w-sm w-full text-center relative shadow-2xl">
+            <button id="closeEmailModal" class="absolute top-4 right-4 text-neutral-400 hover:text-white p-1">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+            </button>
+            <div class="w-12 h-12 bg-neutral-800 rounded-full flex items-center justify-center mx-auto mb-4 text-white">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-1">Get in Touch</h3>
+            <p class="text-xs text-neutral-400 mb-6">I look forward to hearing from you.</p>
+            <a href="mailto:jsmccallen@outlook.com" class="block w-full bg-neutral-800 hover:bg-neutral-700 text-white font-medium py-3 px-4 rounded-xl border border-neutral-700 transition-all text-sm tracking-wide">
+                jsmccallen@outlook.com
+            </a>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        const projectsData = [
+            {
+                id: 1,
+                title: "PAC-MAN Arcade pop",
+                category: "New York City | MACY'S",
+                description: "Full concept and design for a Pac-Man pop-up inside the Macy's in NYC to coordinate with the Macy's parade which featured a Pac-Man Baloon.",
+                previewImage: "images/project-1-4.jpg",
+                images: ["images/project-1-1.jpg", "images/project-1-2.jpg", "images/project-1-3.jpg", "images/project-1-4.jpg", "images/project-1-5.jpg", "images/project-1-6.jpg", "images/project-1-7.jpg", "images/project-1-8.jpg", "images/project-1-9.jpg"]
+            },
+            {
+                id: 2,
+                title: "Tekken Booth",
+                category: "Las Vegas | EVO 2026",
+                description: "One of a kind tekken booth (full turn key design, concept, and install) inspired by the online Tekken arcade",
+                previewImage: "images/project-2-5.jpg",
+                images: ["images/project-2-1.jpg", "images/project-2-2.jpg", "images/project-2-3.jpg", "images/project-2-4.jpg", "images/project-2-5.jpg", "images/project-2-6.jpg", "images/project-2-7.jpg", "images/project-2-8.jpg", "images/project-2-9.mp4"]
+            },
+            {
+                id: 3,
+                title: "Dragon Ball Z Experience",
+                category: "SAN DIEGO | COMIC-CON 2026",
+                description: "Immersive fan zone activation featuring photo-ops and high-impact structural branding. End to end development ",
+                previewImage: "images/project-3-12.jpg",
+                images: ["images/project-3-1.mp4", "images/project-3-2.jpg", "images/project-3-3.jpg", "images/project-3-4.jpg", "images/project-3-5.jpg", "images/project-3-6.jpg", "images/project-3-7.jpg", "images/project-3-8.jpg", "images/project-3-9.jpg", "images/project-3-10.jpg", "images/project-3-11.jpg"]
+            },
+            {
+                id: 4,
+                title: "Arc Systems + Sony Booth",
+                category: "Las Vegas | EVO 2025",
+                description: "Custom tournament layout featuring a demo play section for Sony's Tokon Fighting souls game, this was the first time the game was demoed, full concep, desing and install.",
+                previewImage: "images/project-4-11.jpg",
+                images: ["images/project-4-1.jpg", "images/project-4-2.jpg", "images/project-4-3.jpg", "images/project-4-4.jpg", "images/project-4-5.jpg", "images/project-4-6.jpg", "images/project-4-7.jpg", "images/project-4-8.jpg", "images/project-4-9.jpg", "images/project-4-10.jpg"]
+            },
+            {
+                id: 5,
+                title: "Blackpink Lisa's Solo Album Pop-Up",
+                category: "Los Angeles | Experiental Retial",
+                description: "Exclusive retail pop-up installation featuring custom display fixtures, photo ops and lighting. Full concept design and install.",
+                previewImage: "images/project-5-8.jpg",
+                images: ["images/project-5-1.jpg", "images/project-5-2.jpg", "images/project-5-3.jpg", "images/project-5-4.jpg", "images/project-5-5.jpg", "images/project-5-6.jpg", "images/project-5-7.jpg", "images/project-5-8.jpg", "images/project-5-9.jpg", "images/project-5-10.jpg", "images/project-5-11.jpg"]
+            },
+            {
+                id: 6,
+                title: "Pearl Abyss Gamers Conference",
+                category: "ERVINE CA | THEMED EVENT",
+                description: "Turn-key event concept, fabrication with custom spatial layout and lighting design.",
+                previewImage: "images/project-6-14.jpg",
+                images: ["images/project-6-1.mp4", "images/project-6-2.jpg", "images/project-6-3.jpg", "images/project-6-4.jpg", "images/project-6-5.jpg", "images/project-6-6.jpg", "images/project-6-7.jpg", "images/project-6-8.jpg", "images/project-6-9.jpg", "images/project-6-10.jpg", "images/project-6-11.jpg", "images/project-6-12.jpg", "images/project-6-13.jpg"]
+            },
+            {
+                id: 7,
+                title: "Little Nightmares NYCC Activation",
+                category: "New York City | COMIC CON 2025",
+                description: "Atmospheric themed offsite experience built for New York Comic Con attendees with Javits Center lobby display. Full turn key design and production",
+                previewImage: "images/project-7-6.jpg",
+                images: ["images/project-7-1.jpg", "images/project-7-2.jpg", "images/project-7-3.jpg", "images/project-7-4.jpg", "images/project-7-5.jpg", "images/project-7-6.jpg"]
+            },
+            {
+                id: 8,
+                title: "Summer Game Fest Bandai Namco Area",
+                category: "LOS ANGELES | PLAY DAYS 2026",
+                description: "Large-scale modular exhibit layout with integrated gaming pods and media screens. Full turn key, concept, design, and produciton.",
+                previewImage: "images/project-8-10.jpg",
+                images: ["images/project-8-1.jpg", "images/project-8-2.jpg", "images/project-8-3.jpg", "images/project-8-4.jpg", "images/project-8-5.jpg", "images/project-8-6.jpg", "images/project-8-7.jpg", "images/project-8-8.jpg", "images/project-8-9.jpg", "images/project-8-10.jpg", "images/project-8-11.jpg", "images/project-8-12.jpg", "images/project-8-13.jpg", "images/project-8-14.jpg"]
+            },
+            {
+                id: 9,
+                title: "Pac-Man arcade install pop-up 4 year contract",
+                category: "ANAHIEM CA | ANGELS STADIUM",
+                description: "Themed arcade activation featuring custom illuminated signage, interactive photo op, and gashopon machiens. full turn key, concept, desigm, and production",
+                previewImage: "images/project-9-7.jpg",
+                images: ["images/project-9-1.jpg", "images/project-9-2.jpg", "images/project-9-3.jpg", "images/project-9-4.jpg", "images/project-9-5.jpg", "images/project-9-6.jpg", "images/project-9-7.jpg", "images/project-9-8.jpg", "images/project-9-9.jpg", "images/project-9-10.jpg", "images/project-9-11.jpg"]
+            }
+        ];
+
+        // Render Portfolio Grid
+        const gridContainer = document.getElementById('portfolioGrid');
+        
+        projectsData.forEach(project => {
+            const card = document.createElement('div');
+            card.className = "group bg-card border border-border rounded-xl overflow-hidden cursor-pointer hover:border-neutral-500 transition-all duration-300 flex flex-col shadow-lg";
+            card.onclick = () => openLightbox(project.id);
+
+            card.innerHTML = `
+                <div class="relative overflow-hidden aspect-[3/2] bg-neutral-900">
+                    <img src="${project.previewImage}" alt="${project.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80'">
+                    <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span class="bg-white/90 text-dark text-xs font-semibold px-4 py-2 rounded-full shadow-lg">View Gallery</span>
+                    </div>
+                </div>
+                <div class="p-6 flex flex-col flex-grow">
+                    <span class="text-xs font-bold uppercase tracking-widest text-neutral-400 mb-2">${project.category}</span>
+                    <h3 class="text-lg font-bold text-white mb-2 group-hover:text-neutral-200 transition-colors">${project.title}</h3>
+                    <p class="text-neutral-400 text-sm leading-relaxed">${project.description}</p>
+                </div>
+            `;
+            gridContainer.appendChild(card);
+        });
+
+        // Lightbox State
+        let currentProject = null;
+        let currentImageIndex = 0;
+
+        const lightboxModal = document.getElementById('lightboxModal');
+        const lightboxImage = document.getElementById('lightboxImage');
+        const lightboxVideo = document.getElementById('lightboxVideo');
+        const lightboxTitle = document.getElementById('lightboxTitle');
+        const lightboxCategory = document.getElementById('lightboxCategory');
+        const imageCounter = document.getElementById('imageCounter');
+        
+        const closeLightboxBtn = document.getElementById('closeLightbox');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+
+        function openLightbox(projectId) {
+            currentProject = projectsData.find(p => p.id === projectId);
+            currentImageIndex = 0;
+            updateLightboxContent();
+            lightboxModal.classList.remove('hidden');
+            lightboxModal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            lightboxVideo.pause();
+            lightboxModal.classList.add('hidden');
+            lightboxModal.classList.remove('flex');
+            document.body.style.overflow = 'auto';
+        }
+
+        function updateLightboxContent() {
+            if (!currentProject) return;
+            const currentSrc = currentProject.images[currentImageIndex];
+            const lowerSrc = currentSrc.toLowerCase();
+            
+            if (lowerSrc.endsWith('.mp4') || lowerSrc.endsWith('.webm') || lowerSrc.endsWith('.mov')) {
+                lightboxImage.classList.add('hidden');
+                lightboxVideo.classList.remove('hidden');
+                lightboxVideo.src = currentSrc;
+                lightboxVideo.muted = true;
+                lightboxVideo.currentTime = 0;
+                lightboxVideo.load();
+                lightboxVideo.play().catch(error => {
+                    console.log("Autoplay prevented or video loading:", error);
+                });
+            } else {
+                lightboxVideo.pause();
+                lightboxVideo.classList.add('hidden');
+                lightboxImage.classList.remove('hidden');
+                lightboxImage.src = currentSrc;
+            }
+
+            lightboxTitle.textContent = currentProject.title;
+            lightboxCategory.textContent = currentProject.category;
+            imageCounter.textContent = `Item ${currentImageIndex + 1} of ${currentProject.images.length}`;
+        }
+
+        prevBtn.onclick = (e) => {
+            e.stopPropagation();
+            if (!currentProject) return;
+            currentImageIndex = (currentImageIndex - 1 + currentProject.images.length) % currentProject.images.length;
+            updateLightboxContent();
+        };
+
+        nextBtn.onclick = (e) => {
+            e.stopPropagation();
+            if (!currentProject) return;
+            currentImageIndex = (currentImageIndex + 1) % currentProject.images.length;
+            updateLightboxContent();
+        };
+
+        closeLightboxBtn.onclick = closeLightbox;
+        lightboxModal.onclick = (e) => {
+            if (e.target === lightboxModal) closeLightbox();
+        };
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (lightboxModal.classList.contains('flex')) {
+                if (e.key === 'Escape') closeLightbox();
+                if (e.key === 'ArrowLeft') prevBtn.click();
+                if (e.key === 'ArrowRight') nextBtn.click();
+            }
+        });
+
+        // Email Popup Modal Functionality
+        const emailModal = document.getElementById('emailModal');
+        const getInTouchBtn = document.getElementById('getInTouchBtn');
+        const closeEmailModal = document.getElementById('closeEmailModal');
+
+        getInTouchBtn.onclick = () => {
+            emailModal.classList.remove('hidden');
+            emailModal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        };
+
+        const closeEmailPopup = () => {
+            emailModal.classList.add('hidden');
+            emailModal.classList.remove('flex');
+            document.body.style.overflow = 'auto';
+        };
+
+        closeEmailModal.onclick = closeEmailPopup;
+        emailModal.onclick = (e) => {
+            if (e.target === emailModal) closeEmailPopup();
+        };
+    </script>
+</body>
+</html>
